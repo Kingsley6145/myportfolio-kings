@@ -16,11 +16,22 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+              {/* LinkedIn - Searching for Kingsley Ombongi */}
+              <a href="https://www.linkedin.com/search/results/all/?keywords=Kingsley%20Ombongi" target="_blank" rel="noopener noreferrer">
+                <img src={navIcon1} alt="LinkedIn" />
+              </a>
+              
+              {/* Facebook - Searching for Kingsley Ombongi */}
+              <a href="https://www.facebook.com/search/top?q=Kingsley%20Ombongi" target="_blank" rel="noopener noreferrer">
+                <img src={navIcon2} alt="Facebook" />
+              </a>
+              
+              {/* Instagram - its_kingslee */}
+              <a href="https://www.instagram.com/its_kingslee" target="_blank" rel="noopener noreferrer">
+                <img src={navIcon3} alt="Instagram" />
+              </a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>Copyright 2026. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
