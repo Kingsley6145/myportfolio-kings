@@ -1,6 +1,10 @@
 import { Container, Row, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+// Asset imports
 import polycrestImg from "../assets/img/polycrest.png"; 
+import gametribeImg from "../assets/img/gametribe.png";
+import triviaImg from "../assets/img/Trivia.png";
+import igamingNewsImg from "../assets/img/igaming-news.png"; // New import for the 4th image
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
@@ -18,22 +22,22 @@ export const Projects = () => {
       projectUrl: "https://polycrest-kids1.web.app/",
     },
     {
-      title: "Mobile Banking App",
-      description: "Developed using Flutter & Dart",
-      imgUrl: projImg2,
-      projectUrl: "#",
+      title: "GameTribe",
+      description: "Gaming Community",
+      imgUrl: gametribeImg,
+      projectUrl: "http://gametribe.com/",
     },
     {
-      title: "Fitness Tracker",
-      description: "UI/UX Design & React Native",
-      imgUrl: projImg3,
-      projectUrl: "#",
+      title: "Trivia",
+      description: "Trivia games",
+      imgUrl: triviaImg,
+      projectUrl: "https://pitchtrivia.web.app/",
     },
     {
-      title: "Social Media Dashboard",
-      description: "JavaScript & Advanced CSS",
-      imgUrl: projImg1,
-      projectUrl: "#",
+      title: "Igaming News", // Updated Title
+      description: "Giving you updates and articles on the igaming industry", // Updated Description
+      imgUrl: igamingNewsImg, // Updated Image
+      projectUrl: "https://play.google.com/store/apps/details?id=com.gametribe.igaming_news&pli=1", // Updated Link
     },
     {
       title: "Real Estate Portal",
