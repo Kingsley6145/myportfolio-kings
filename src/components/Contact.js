@@ -28,20 +28,27 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    // Your actual EmailJS Credentials
-    const serviceID = "service_c08xdsx"; 
-    const templateID = "template_v06605s";
+    // Your EmailJS Credentials
+    const serviceID = "service_srakqmk"; 
     const publicKey = "q96ksh9MWdEHKGZAc";
+    
+    // The two different templates
+    const templateID_Notification = "template_v06605s"; // Template for YOU
+    const templateID_AutoReply = "template_crtialb";    // Template for USER
 
-    // Sending the form data via EmailJS
-    emailjs.send(serviceID, templateID, formDetails, publicKey)
-      .then((response) => {
+    // Triggering both emails at once
+    const sendNotification = emailjs.send(serviceID, templateID_Notification, formDetails, publicKey);
+    const sendAutoReply = emailjs.send(serviceID, templateID_AutoReply, formDetails, publicKey);
+
+    Promise.all([sendNotification, sendAutoReply])
+      .then((responses) => {
         setButtonText("Send");
         setFormDetails(formInitialDetails);
-        setStatus({ success: true, message: 'Message sent successfully!'});
-      }, (err) => {
+        setStatus({ success: true, message: 'Message sent and confirmation delivered!'});
+      })
+      .catch((err) => {
         setButtonText("Send");
-        setStatus({ success: false, message: 'Something went wrong. Please check your connection.'});
+        setStatus({ success: false, message: 'Something went wrong. Please try again later.'});
         console.log("EmailJS Error:", err);
       });
   };
